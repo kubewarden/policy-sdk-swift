@@ -31,6 +31,8 @@ public protocol Validatable {
 /// - Parameter S: Your policy settings class
 public struct SettingsValidator<S: Validatable & Codable> {
 
+  public init() {}
+
   /// This method instantiates the generic settings class defined at construction
   /// time using the provided payload. Then it invokes the `validate()` method
   /// provided by it and build a `SettingsValidationResponse` object

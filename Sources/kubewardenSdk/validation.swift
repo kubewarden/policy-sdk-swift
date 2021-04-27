@@ -11,8 +11,8 @@ import Foundation
 ///   with Swift 5. This will be possible once
 ///   [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) can build
 ///   using SwiftWasm
-public struct ValidationRequest<S: Validatable & Codable> {
-  let settings: S
+public struct ValidationRequest<S: Validatable & Codable > : Codable {
+  public let settings: S
 }
 
 /// This structure defines the response to provide
