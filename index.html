@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubewarden SDK - Kubewarden SDK</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                Kubewarden SDK
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li><li><a href="#protocols">Protocols</a></li><li><a href="#functions">Functions</a></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+                <section id="structures">
+        <h2>Structures</h2>
+        <dl>
+            <dt class="structure">
+    <a href="./SettingsValidator" title="structure - SettingsValidator">
+        Settings​Validator
+    </a>
+</dt>
+<dd>
+    <p>Helper structure that performs settings validation</p>
+
+</dd>
+<dt class="structure">
+    <a href="./SettingsValidationResponse" title="structure - SettingsValidationResponse">
+        Settings​Validation​Response
+    </a>
+</dt>
+<dd>
+    <p>This structure defines the response to provide
+when validating settings.</p>
+
+</dd>
+<dt class="structure">
+    <a href="./ValidationRequest" title="structure - ValidationRequest">
+        Validation​Request
+    </a>
+</dt>
+<dd>
+    <p>Describes the ValidationRequest object given to the policy
+inside of the <code>validate</code> guest function.</p>
+
+</dd>
+<dt class="structure">
+    <a href="./ValidationResponse" title="structure - ValidationResponse">
+        Validation​Response
+    </a>
+</dt>
+<dd>
+    <p>This structure defines the response to provide
+when validating an admission request.</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="enumerations">
+        <h2>Enumerations</h2>
+        <dl>
+            <dt class="enumeration">
+    <a href="./SettingsValidationError" title="enumeration - SettingsValidationError">
+        Settings​Validation​Error
+    </a>
+</dt>
+<dd>
+    <p>Errors raised when policy's settings validation fails</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="protocols">
+        <h2>Protocols</h2>
+        <dl>
+            <dt class="protocol">
+    <a href="./Validatable" title="protocol - Validatable">
+        Validatable
+    </a>
+</dt>
+<dd>
+    <p>Protocol that must be implemented by Kubewarden policies
+in order to be used by <code>SettingsValidator</code></p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="functions">
+        <h2>Functions</h2>
+        <dl>
+            <dt class="function">
+    <a href="./acceptSettings()" title="function - acceptSettings()">
+        accept​Settings()
+    </a>
+</dt>
+<dd>
+    <p>This function accepts the Settings as valid</p>
+
+</dd>
+<dt class="function">
+    <a href="./rejectSettings(message:)" title="function - rejectSettings(message:)">
+        reject​Settings(message:​)
+    </a>
+</dt>
+<dd>
+    <p>This function rejects the Settings as invalid</p>
+
+</dd>
+<dt class="function">
+    <a href="./acceptRequest()" title="function - acceptRequest()">
+        accept​Request()
+    </a>
+</dt>
+<dd>
+    <p>This function accepts the admission request as valid</p>
+
+</dd>
+<dt class="function">
+    <a href="./rejectRequest(message:code:)" title="function - rejectRequest(message:code:)">
+        reject​Request(message:​code:​)
+    </a>
+</dt>
+<dd>
+    <p>This function rejects the admission request as invalid</p>
+
+</dd>
+        </dl>
+    </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-04-27T10:32:02+0000">April 27, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+</p>
+    </footer>
+</body>
+</html>

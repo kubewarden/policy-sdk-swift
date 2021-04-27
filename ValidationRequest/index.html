@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubewarden SDK - ValidationRequest</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                Kubewarden SDK
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol/>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Validation​Request</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">ValidationRequest</span>&lt;<span class="variable">S</span>: <span class="type">Validatable</span> &amp; <span class="type">Codable</span>&gt; </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Describes the ValidationRequest object given to the policy
+inside of the <code>validate</code> guest function.</p>
+
+</div>
+<div class="discussion">
+    <p>This structure can be used to quickly deserialize the
+policy settings from the validation request using <code>JSONDecoder</code>.</p>
+
+<aside class="Important">
+    <p>The actual validation request object has to be extracted manually. It's not possible to deserialize a dynamic JSON hash yet with Swift 5. This will be possible once <a href="https://github.com/SwiftyJSON/SwiftyJSON">SwiftyJSON</a> can build using SwiftWasm</p>
+
+</aside>
+</div>
+
+
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-04-27T10:32:02+0000">April 27, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+</p>
+    </footer>
+</body>
+</html>

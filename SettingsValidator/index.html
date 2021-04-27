@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubewarden SDK - SettingsValidator</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                Kubewarden SDK
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol/>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Settings​Validator</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">SettingsValidator</span>&lt;<span class="variable">S</span>: <span class="type">Validatable</span> &amp; <span class="type">Codable</span>&gt; </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Helper structure that performs settings validation</p>
+
+</div>
+<div class="discussion">
+    <p>This can be used inside of your policy <code>main.swift</code> file
+to simplify the registration of the <code>validate_settings</code> guest function:</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">settingsValidator</span> = <span class="variable">SettingsValidator</span>&lt;<span class="type">MyPolicySettings</span>&gt;()
+<span class="variable">wapc</span>.<span class="variable">registerFunction</span>(<span class="variable">name</span>: <span class="string literal">"</span><span class="string literal">validate_settings</span><span class="string literal">"</span>, <span class="variable">fn</span>: <span class="type">settingsValidator</span>.<span class="variable">validate</span>)
+</code></pre></body></html>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>S</th>
+    <td></td>
+    <td><p>Your policy settings class</p>
+</td>
+</tr>
+  </tbody>
+</table>
+
+
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-04-27T10:32:02+0000">April 27, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+</p>
+    </footer>
+</body>
+</html>
