@@ -1,0 +1,25 @@
+name: Documentation
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Generate Documentation
+        uses: SwiftDocOrg/swift-doc@master
+        with:
+          inputs: "Sources"
+          module-name: "Kubewarden SDK"
+          format: "html"
+          output: "docs"
+      - name: fix permissions
+        run: |
+          sudo chown -R $USER docs
+      - name: Update GH pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
