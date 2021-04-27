@@ -37,7 +37,7 @@ public struct SettingsValidator<S: Validatable & Codable> {
   ///
   /// - Parameter payload: A JSON dictionary holding the settings
   /// - Returns: A `SettingsValidationResponse` serialized to JSON
-  func validate(payload: String) -> String {
+  public func validate(payload: String) -> String {
     let settings: S
     do {
       settings = try JSONDecoder().decode( S.self, from: Data(payload.utf8))
