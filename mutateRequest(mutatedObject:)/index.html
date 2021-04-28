@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kubewarden SDK - rejectRequest(message:code:)</title>
+    <title>Kubewarden SDK - mutateRequest(mutatedObject:)</title>
     <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
 </head>
 <body>
@@ -34,15 +34,21 @@
         <article>
             <h1>
 <small>Function</small>
-<span class="name">reject​Request(message:​code:​)</span>
+<span class="name">mutate​Request(mutated​Object:​)</span>
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">rejectRequest</span>(<span class="variable">message</span>: <span class="type">String</span>?, <span class="variable">code</span>: <span class="type">Int</span>?) -&gt; <span class="type">String</span> </code></pre>
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">mutateRequest</span>(<span class="variable">mutatedObject</span>: <span class="type">JSON</span>) -&gt; <span class="type">String</span> </code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>This function rejects the admission request as invalid</p>
+    <p>This function accepts the admission request as valid</p>
 
+</div>
+<div class="discussion">
+    <aside class="See Also">
+    <p><a href="https://github.com/zoul/generic-json-swift">GenericJSON</a>: this library provides a way to serialize and deserialize generic JSON structures</p>
+
+</aside>
 </div>
 <h4>Parameters</h4>
 
@@ -56,15 +62,9 @@
   </thead>
   <tbody>
     <tr>
-    <th>message</th>
-    <td><code class="type">String?</code></td>
-    <td><p>the optional message to provide to the user</p>
-</td>
-</tr>
-<tr>
-    <th>code</th>
-    <td><code class="type">Int?</code></td>
-    <td><p>the optional code identifying the rejection</p>
+    <th>mutated​Object</th>
+    <td><code class="type">JSON</code></td>
+    <td><p>an instance of <code>GenericJSON.JSON</code> that holds the new object</p>
 </td>
 </tr>
   </tbody>
