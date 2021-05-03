@@ -19,10 +19,17 @@ public struct ValidationRequest<S: Validatable & Codable > : Codable {
 /// This structure defines the response to provide
 /// when validating an admission request.
 public struct ValidationResponse : Codable {
-  let accepted: Bool
-  let message: String?
-  let code: Int?
-  let mutatedObject: JSON?
+  public let accepted: Bool
+  public let message: String?
+  public let code: Int?
+  public let mutatedObject: JSON?
+
+  enum CodingKeys: String, CodingKey {
+    case accepted
+    case message
+    case code
+    case mutatedObject = "mutated_object"
+  }
 }
 
 /// This function accepts the admission request as valid
