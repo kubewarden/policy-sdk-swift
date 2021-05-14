@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kubewarden SDK - rejectRequest(message:code:)</title>
+    <title>Kubewarden SDK - protocolVersionCallback(payload:)</title>
     <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
 </head>
 <body>
@@ -34,43 +34,19 @@
         <article>
             <h1>
 <small>Function</small>
-<span class="name">reject​Request(message:​code:​)</span>
+<span class="name">protocol​Version​Callback(payload:​)</span>
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">rejectRequest</span>(<span class="variable">message</span>: <span class="type">String</span>?, <span class="variable">code</span>: <span class="type">Int</span>?) -&gt; <span class="type">String</span> </code></pre>
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">protocolVersionCallback</span>(<span class="variable">payload</span>: <span class="type">String</span>) -&gt; <span class="type">String</span> </code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>This function rejects the admission request as invalid</p>
+    <p>This function provides the implementation of the <code>protocol_version</code> waPC
+guest function.</p>
 
 </div>
-<h4>Parameters</h4>
-
-<table class="parameters">
-  <thead hidden>
-  <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-    <tr>
-    <th>message</th>
-    <td><code class="type">String?</code></td>
-    <td><p>the optional message to provide to the user</p>
-</td>
-</tr>
-<tr>
-    <th>code</th>
-    <td><code class="type">Int?</code></td>
-    <td><p>the optional code identifying the rejection</p>
-</td>
-</tr>
-  </tbody>
-</table>
   <h4>Returns</h4>
-  <p>A <code>ValidationResponse</code> object serialized to JSON</p>
+  <p>the protocol version the policy supports</p>
 
         </article>
     </main>
