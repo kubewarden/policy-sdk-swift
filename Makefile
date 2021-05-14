@@ -1,4 +1,4 @@
-CONTAINER_RUNTIME ?= $(shell command -v podman 2> /dev/null || shell command -v docker 2> /de/null)
+CONTAINER_RUNTIME ?= docker
 CONTAINER_IMAGE := "ghcr.io/swiftwasm/swiftwasm-action:5.3"
 
 containerized-build: clean
