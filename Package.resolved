@@ -9,6 +9,24 @@
           "revision": "a137894b2a217abe489cdf1ea287e6f7819b1051",
           "version": "2.0.1"
         }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
+          "version": "1.4.2"
+        }
+      },
+      {
+        "package": "wapc",
+        "repositoryURL": "https://github.com/wapc/wapc-guest-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "018341211e440ab07d9a14d86b43978b748e0ea5",
+          "version": "0.0.2"
+        }
       }
     ]
   },

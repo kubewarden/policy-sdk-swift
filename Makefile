@@ -1,5 +1,5 @@
 CONTAINER_RUNTIME ?= docker
-CONTAINER_IMAGE := "ghcr.io/swiftwasm/swiftwasm-action:5.3"
+CONTAINER_IMAGE := "ghcr.io/kubewarden/swift-wasm-runner:5.3"
 
 containerized-build: clean
 ifndef CONTAINER_RUNTIME
@@ -16,7 +16,7 @@ endif
 	$(CONTAINER_RUNTIME) run --rm -v $(PWD):/code --entrypoint /bin/bash $(CONTAINER_IMAGE) -c "cd /code && carton test"
 
 containerized-docs:
-	$(CONTAINER_RUNTIME) run -ti --rm -v $(PWD):/code swiftdoc/swift-doc generate /code --module-name "Kubewarden SDK" --format html --output /code/docs
+	$(CONTAINER_RUNTIME) run -ti --rm -v $(PWD):/code swiftdoc/swift-doc:1.0.0-rc.1 generate /code --module-name "Kubewarden SDK" --format html --output /code/docs
 
 clean:
 	rm -rf .build
