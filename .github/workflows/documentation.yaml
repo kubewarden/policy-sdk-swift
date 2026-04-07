@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Generate Documentation
-        uses: SwiftDocOrg/swift-doc@master
+        uses: SwiftDocOrg/swift-doc@f935ebfe524a0ff27bda07dadc3662e3e45b5125 # 1.0.0-rc.1
         with:
           inputs: "Sources"
           module-name: "Kubewarden SDK"
